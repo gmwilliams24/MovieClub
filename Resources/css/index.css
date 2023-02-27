@@ -1,0 +1,302 @@
+/* Universal fonts */
+
+/* Title */
+
+#title-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+#title-banner .img-container {
+    width: 100%;
+    height: 20rem;
+    z-index: 0;
+}
+
+#title-banner .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#title-banner .title-text {
+    position: absolute;
+    width: 100%;
+    font-size: 5rem;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.8);
+    z-index: 1;
+}
+
+/* Featured movies */
+
+#featured-movies {
+    padding: 0 2rem;
+}
+
+#featured-movies .section-text {
+    font-size: 3rem;
+    font-family: 'Exo 2', sans-serif;
+    padding: 1.5rem 0;
+}
+
+#featured-movies .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+}
+
+#featured-movies .images-container .featured-container {
+    width: 24%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+#featured-movies .images-container .featured-container .img-container {
+    height: 30rem;
+    width: 100%;
+}
+
+#featured-movies .images-container .featured-container .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#featured-movies .images-container .featured-container .text-container {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    justify-content: center;
+}
+
+#featured-movies .images-container .featured-container .text-container h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    text-align: center;  
+}
+
+/* Smartphone: Featured movies */
+@media only screen and (max-width: 426px) {
+
+    #featured-movies .images-container .featured-container {
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+
+}
+
+/* Tablet: Featured movies */
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+
+    #featured-movies .images-container .featured-container {
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+
+}
+
+/* Favorites */
+
+#favorites {
+    display: flex;
+    flex-flow: column;
+    padding: 0 2rem;
+}
+
+#favorites .favorites-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+#favorites .favorites-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    list-style-type: none;
+    height: 37rem;
+}
+
+#favorites .favorites-container li {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#favorites .favorites-container li .img-container {
+    height: 30rem;
+    width: 100%;
+}
+
+#favorites .favorites-container li .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#favorites .favorites-container .text-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#favorites .favorites-container .text-container span {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Smartphone: Favorites */
+@media only screen and (max-width: 426px) {
+
+    #favorites .favorites-container {
+        grid-template: repeat(3, 1fr) / 1fr;
+        height: 111rem;
+        row-gap: 3rem;
+    }
+
+    #favorites .favorites-container .text-container span {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* Tablet: Favorites */
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+
+    #favorites .favorites-container {
+        grid-template: repeat(3, 1fr) / 1fr;
+        height: 111rem;
+        row-gap: 3rem;
+    }
+
+    #favorites .favorites-container li .img-container {
+        display: flex;
+        position: relative;
+    }
+
+    #favorites .favorites-container li .img-container img {
+        position: absolute;
+
+    }
+
+    #favorites .favorites-container .text-container span {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* About movie club */
+
+#about-movie-club {
+    display: flex;
+    flex-flow: column;
+    margin: 1rem 2rem;
+}
+
+#about-movie-club .about-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3rem;
+    padding-bottom: 0.7rem;
+}
+
+#about-movie-club .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1rem;
+    height: 20rem;
+}
+
+#about-movie-club .grid-container .img-container {
+    grid-area: 1 / 2 / span 1 / span 1;
+    display: flex;
+    position: relative;
+    height: fit-content;
+}
+
+#about-movie-club .grid-container .img-container img {
+    width: 100%;
+    height: auto;
+    max-height: 20rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-position: left;
+}
+
+#about-movie-club .grid-container p {
+    grid-area: 1 / 1 / span 1 / span 1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Smartphone: About movie club */
+@media only screen and (max-width: 426px) {
+
+    #about-movie-club .grid-container {
+        grid-template-columns: 2fr 1fr;
+        height: auto;
+    }
+
+    #about-movie-club .grid-container .img-container {
+        display: none;
+    }
+
+    #about-movie-club .grid-container p {
+        grid-area: 1 / 1 / span 1 / span 2;
+        font-size: 1.5rem;
+    }
+
+}
+
+/* Tablet: About movie club */
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+
+    #about-movie-club .grid-container {
+        grid-template-columns: 2fr 1fr;
+        height: auto;
+    }
+
+    #about-movie-club .grid-container .img-container {
+        display: none;
+    }
+
+    #about-movie-club .grid-container p {
+        grid-area: 1 / 1 / span 1 / span 2;
+        font-size: 1.5rem;
+    }
+
+}
+
+/* Contact */
+#contact {
+    display: flex;
+    background-color: rgb(0, 181, 236);
+    padding: 2rem 0;
+}
+
+#contact {
+    display: flex;
+    background-color: rgb(0, 181, 236);
+    padding: 2rem 0;
+}
+
+#contact .contact-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+}
+
+#contact .contact-list li span {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.5rem;
+}
